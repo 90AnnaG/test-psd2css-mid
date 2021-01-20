@@ -1,0 +1,96 @@
+@import "_mixins";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  @include body;
+}
+
+.header-container {
+  @include header;
+
+  &__logo {
+    @include logo;
+  }
+}
+
+.content {
+  @include content;
+
+  &__mainHeading {
+    @include mainHeading;
+  }
+
+  &__headingDescription {
+    @include headingDescription;
+  }
+
+  &__secondHeading {
+    @include secondHeading;
+  }
+
+
+  .box-container {
+    @include box-container;
+
+    &__arrow-left {
+      @include arrow-left;
+    }
+
+    &__arrow-left:hover, &__arrow-right:hover {
+      background: #ffffff0d;
+    }
+
+    &__arrow-right {
+      @include arrow-right;
+    }
+
+    &__box {
+      @include box;
+
+      .box__boxHeading {
+        @include boxHeading;
+      }
+
+      .box__boxText {
+        @include boxText;
+      }
+
+      .box__boxLogo {
+        @include boxLogo;
+      }
+    }
+
+    &__slider-container {
+      @include slider-container;
+    }
+  }
+
+  .box-container-content2 {
+    @include box-container-content2;
+  }
+
+  &__dot {
+    @include dot;
+  }
+}
+
+.content--dark {
+  @include content-dark;
+}
+
+.content--light {
+  @include content-light;
+}
+
+.heading--dark {
+  @include heading-dark;
+}
+
+.box--sliderForMobile {
+  @include box-sliderForMobile;
+}

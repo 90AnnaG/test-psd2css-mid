@@ -1,0 +1,440 @@
+@import "_variables";
+@import "_breakpoints";
+
+@mixin body {
+    background    : $light-container-color;
+    display       : flex;
+    flex-direction: column;
+    font-family   : 'Rubik', sans-serif;
+    margin        : 0;
+    padding       : 0;
+}
+
+@mixin header {
+    background: #fff;
+
+    @media (min-width: #{$screen-mobile}) {
+        height : 34px;
+        padding: 3px;
+        width  : 100%;
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        height: 64px;
+    }
+
+    @media (min-width: #{$screen-laptop}) {
+        height: 45px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        height: 35px;
+    }
+}
+
+@mixin logo {
+    @media (min-width: #{$screen-mobile}) {
+        height     : 19px;
+        margin-left: 20%;
+        margin-top : 5px;
+        width      : 80px;
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        height    : 38px;
+        margin-top: 10px;
+        width     : 160px;
+    }
+
+    @media (min-width: #{$screen-laptop}) {
+        height    : 31px;
+        margin-top: 5px;
+        width     : 130px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        height    : 26px;
+        margin-top: 2px;
+        width     : 110px;
+    }
+}
+
+@mixin content {
+    align-items   : center;
+    display       : flex;
+    flex-direction: column;
+    justify-items : center;
+    min-height    : 200px;
+    padding       : 5px;
+    text-align    : center;
+    width         : 100%;
+}
+
+@mixin content-dark {
+    background: $dark-container-color;
+}
+
+@mixin content-light {
+    background: $light-container-color;
+}
+
+@mixin mainHeading {
+    color      : $white-font-color;
+    font-weight: normal;
+    margin     : 10px 0 0 0;
+    padding    : 0;
+    text-align : center;
+    width      : 200px;
+    height     : 30px;
+
+    @media (min-width: #{$screen-mobile}) {
+        font-size: 20px;
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        font-size: 22px;
+        margin   : 20px 0 0 0;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        margin: 15px 0 0 0;
+    }
+
+    @media (min-width: #{$screen-bigDesktop}) {
+        font-size: 25px;
+    }
+}
+
+@mixin headingDescription {
+    color      : $white-font-color;
+    font-weight: normal;
+    margin     : 5px 0 10px 0;
+    padding    : 0;
+    text-align : center;
+
+    @media (min-width: #{$screen-mobile}) {
+        font-size: 14px;
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        font-size: 20px;
+    }
+
+    @media (min-width: #{$screen-laptop}) {
+        font-size: 14px;
+    }
+
+    @media (min-width: #{$screen-bigDesktop}) {
+        font-size: 20px;
+    }
+}
+
+@mixin secondHeading {
+    color      : #2D3236;
+    font-size  : 17px;
+    font-weight: normal;
+    margin     : 5px 0 0 0;
+    padding    : 0;
+    text-align : center;
+}
+
+@mixin heading-dark {
+    color: $dark-font-color;
+}
+
+@mixin box-container {
+    list-style: none;
+    padding   : 2px;
+    position  : relative;
+
+    @media (min-width: #{$screen-mobile}) {
+        display       : inline-flex;
+        flex-direction: column;
+        width         : 100%;
+    }
+
+    @media (min-width: #{$screen-bigMobile}) {
+        width: 95%;
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        flex-direction: row;
+        width         : 100%;
+    }
+
+    @media (min-width: #{$screen-laptop}) {
+        width: 85%;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        width: 70%;
+    }
+
+    @media (min-width: #{$screen-bigDesktop}) {
+        width: 67%;
+    }
+}
+
+@mixin arrow-left {
+    border-radius: 50px;
+    cursor       : pointer;
+    margin       : 0;
+    position     : absolute;
+    top          : 70px;
+
+    @media (min-width: #{$screen-mobile}) {
+        height: 35px;
+        width : 35px;
+    }
+
+    @media (min-width: #{$screen-bigMobile}) {
+        height: 40px;
+        left  : 0;
+        width : 40px;
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        height: 40px;
+        left  : 5px;
+        width : 40px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        height: 35px;
+        width : 35px;
+    }
+}
+
+@mixin arrow-right {
+    border-radius: 50px;
+    cursor       : pointer;
+    margin       : 0;
+    position     : absolute;
+    top          : 70px;
+    right        : 5px;
+
+    @media (min-width: #{$screen-mobile}) {
+        height: 35px;
+        width : 35px;
+    }
+
+    @media (min-width: #{$screen-bigMobile}) {
+        height: 40px;
+        right : 0;
+        width : 40px;
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        height: 40px;
+        right : 5px;
+        width : 40px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        height: 35px;
+        width : 35px;
+    }
+}
+
+@mixin slider-container {
+    display: flex;
+    margin : 0 auto;
+    width  : 100%;
+
+    @media (min-width: #{$screen-mobile}) {
+        min-height  : 161px;
+        max-width   : 225px;
+        min-width   : 215px;
+        overflow    : hidden;
+        padding-left: 4px;
+    }
+
+    @media (min-width: #{$screen-bigMobile}) {
+        max-width : 285px;
+        min-height: 189px;
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        justify-content: center;
+        min-height     : 170px;
+        min-width      : 92%;
+        overflow       : visible;
+        padding        : 0;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        min-width: 92%;
+    }
+}
+
+@mixin box-container-content2 {
+    align-items    : center;
+    display        : flex;
+    justify-content: center;
+    margin         : 10px 0 0 0;
+    padding        : 0;
+    width          : 100%;
+
+    @media (min-width: #{$screen-mobile}) {
+        flex-direction: column;
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        flex-direction: row;
+    }
+}
+
+@mixin box {
+    background: $boxes-color;
+    display   : block;
+    padding   : 10px 25px;
+    text-align: center;
+
+    @media (min-width: #{$screen-mobile}) {
+        float : left;
+        height: 161px;
+        margin: 4px 20px 4px 4px;
+        width : 230px;
+    }
+
+    @media (min-width: #{$screen-bigMobile}) {
+        height: 175px;
+        margin: 4px;
+        width : 270px;
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        clear    : both;
+        height   : 170px;
+        max-width: 250px;
+        width    : 240px;
+    }
+
+    @media (min-width: #{$screen-laptop}) {
+        margin    : 4px 5px;
+        min-height: 155px;
+        min-width : 220px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        margin    : 4px 12px 4px 4px;
+        max-height: 155px;
+        min-width : 260px;
+    }
+
+    @media (min-width: #{$screen-bigDesktop}) {
+        min-height: 175px;
+        min-width : 290px;
+    }
+}
+
+@mixin box-sliderForMobile {
+    @media (min-width: #{$screen-mobile}) {
+        min-height: 147px;
+        max-width : 220px;
+        min-width : 210px;
+    }
+
+    @media (min-width: #{$screen-bigMobile}) {
+        min-height: 170px;
+        min-width : 270px;
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        max-height: 140px;
+        min-width : 190px;
+    }
+
+    @media (min-width: #{$screen-laptop}) {
+        min-height: 165px;
+        min-width : 220px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        min-height: 165px;
+        min-width : 260px;
+    }
+
+    @media (min-width: #{$screen-bigDesktop}) {
+        min-height: 175px;
+        min-width : 290px;
+    }
+}
+
+@mixin boxHeading {
+    color      : $dark-font-color;
+    font-weight: normal;
+    margin     : 10px 0;
+
+    @media (min-width: #{$screen-mobile}) {
+        font-size: 19px;
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        font-size: 19px;
+    }
+
+    @media (min-width: #{$screen-laptop}) {
+        font-size: 17px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        font-size: 18px;
+    }
+}
+
+@mixin boxText {
+    color      : $dark-font-color;
+    font-weight: normal;
+    margin     : 5px 0;
+
+    @media (min-width: #{$screen-mobile}) {
+        font-size: 14px
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        font-size: 14px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        font-size: 15px;
+    }
+}
+
+@mixin boxLogo {
+
+    @media (min-width: #{$screen-mobile}) {
+        height    : 30px;
+        margin-top: 7px;
+        width     : 30px;
+    }
+
+    @media (min-width: #{$screen-bigMobile}) {
+        height    : 35px;
+        margin-top: 12px;
+        width     : 35px;
+    }
+
+    @media (min-width: #{$screen-tablet}) {
+        height    : 35px;
+        margin-top: 10px;
+        width     : 35px;
+    }
+
+    @media (min-width: #{$screen-desktop}) {
+        height    : 30px;
+        margin-top: 5px;
+        width     : 30px;
+    }
+}
+
+@mixin dot {
+    background   : $dot-color;
+    border-radius: 50%;
+    bottom       : -14px;
+    display      : block;
+    height       : 18px;
+    margin       : auto;
+    position     : relative;
+    width        : 18px;
+}
